@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   get "/", to: "seas#welcome"
   get "/seas", to: "seas#index"
   get "/seas/new", to: "seas#new"
+  post "/seas/:id", to: "seas#show"
+
+
 end

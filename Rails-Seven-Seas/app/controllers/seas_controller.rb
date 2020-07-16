@@ -9,6 +9,10 @@ class SeasController < ApplicationController
   def new
     @sea = Sea.new
   end
+
+  def show
+    @sea = Sea.find(params[:id])
+  end
   
   private
   # In controller actions, use this private method to access sea params from forms.
