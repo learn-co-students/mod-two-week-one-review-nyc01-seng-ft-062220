@@ -10,4 +10,8 @@ class SeasController < ApplicationController
     params.require(:sea).permit(:name, :temperature, :bio, :mood, :image_url, :favorite_color, :scariest_creature, :has_mermaids)
   end
 
+  def welcome
+
+  end
+
 end
