@@ -43,6 +43,7 @@ class SeasController < ApplicationController
     @sea = Sea.find(params[:id])
     @sea.destroy
     redirect to "/seas"
+    redirect_to action: "show", id: 5
   end
 
 end
