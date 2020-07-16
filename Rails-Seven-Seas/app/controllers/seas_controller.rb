@@ -1,6 +1,25 @@
 class SeasController < ApplicationController
   #define your controller actions here
 
+  def index
+    @seas = Sea.all
+  end 
+
+  def new 
+    @sea = Sea.create(sea_params)
+  end
+
+  def show
+    @sea = Sea.find(params[:id])
+  end
+
+  def seas_path
+    @sea = Sea.find(params[:id])
+  end 
+
+
+
+
 
   private
   # In controller actions, use this private method to access sea params from forms.
@@ -9,5 +28,6 @@ class SeasController < ApplicationController
   def sea_params
     params.require(:sea).permit(:name, :temperature, :bio, :mood, :image_url, :favorite_color, :scariest_creature, :has_mermaids)
   end
+
 
 end
